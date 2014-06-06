@@ -33,6 +33,25 @@ public class MainActivity extends ActionBarActivity {
         add=(Button) findViewById(R.id.bAdd);
         sub=(Button) findViewById(R.id.bSub);
         display = (TextView) findViewById(R.id.tvDisplay);
+        //
+        add.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				counter++;
+				display.setText("You total is " + counter);
+			}
+		});
+        sub.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				counter--;
+				display.setText("You total is " + counter);
+			}
+		});
     }
 
 
