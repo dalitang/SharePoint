@@ -7,15 +7,19 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
 
-	int counter;
-	Button add, sub;
-	TextView display;
+	
+    static int counter=0;
+	//Button add, sub;
+//	TextView display = (TextView) findViewById(R.id.tvDisplay);
+
+
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,31 +31,8 @@ public class MainActivity extends ActionBarActivity {
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
         }
-        
-        //ADD "view" Xml connection with "controller"
-        counter=0;
-        add=(Button) findViewById(R.id.bAdd);
-        sub=(Button) findViewById(R.id.bSub);
-        display = (TextView) findViewById(R.id.tvDisplay);
-        //
-        add.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				counter++;
-				display.setText("You total is " + counter);
-			}
-		});
-        sub.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				counter--;
-				display.setText("You total is " + counter);
-			}
-		});
+       
+
     }
 
 
@@ -79,16 +60,53 @@ public class MainActivity extends ActionBarActivity {
      * A placeholder fragment containing a simple view.
      */
     public static class PlaceholderFragment extends Fragment {
+        
+    	public PlaceholderFragment() {
 
-        public PlaceholderFragment() {
         }
+        
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            
+            Button add = (Button) rootView.findViewById(R.id.bAdd);
+            Button sub = (Button) rootView.findViewById(R.id.bSub);
+            final TextView display=(TextView) rootView.findViewById(R.id.tvDisplay);
+            add.setOnClickListener(new OnClickListener() {
+
+    			@Override
+    			public void onClick(View view) {
+//    				Toast.makeText(MainActivity.this, "Button Clicked",	Toast.LENGTH_SHORT).show();
+    			counter++;
+    			display.setText("You total is " + counter);
+    			}
+
+    		});
+            sub.setOnClickListener(new OnClickListener() {
+
+    			@Override
+    			public void onClick(View view) {
+//    				Toast.makeText(MainActivity.this, "Button Clicked",	Toast.LENGTH_SHORT).show();
+    			counter--;
+    			display.setText("You total is " + counter);
+    			}
+
+    		});
             return rootView;
         }
+        
+
     }
+    
+
+    
+//    public void sendMessageAdd(View view) {
+//        // Do something in response to button click
+//        //counter=0;
+//
+//        Button add=(Button) findViewById(R.id.bAdd);
+
 
 }
