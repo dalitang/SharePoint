@@ -59,6 +59,8 @@ public class MainActivity extends ActionBarActivity {
     /**
      * A placeholder fragment containing a simple view.
      */
+    //static class cannot be subclassed
+    //it belongs to upper class rather than an object
     public static class PlaceholderFragment extends Fragment {
         
     	public PlaceholderFragment() {
@@ -71,15 +73,22 @@ public class MainActivity extends ActionBarActivity {
                 Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             
+            //add the Button listener here START!!!!!
             Button add = (Button) rootView.findViewById(R.id.bAdd);
             Button sub = (Button) rootView.findViewById(R.id.bSub);
+            //final means you cannot change the reference
+            //but not the contains of object!!!!
+            //However you cannot change a final variable!!!
             final TextView display=(TextView) rootView.findViewById(R.id.tvDisplay);
+            //the onCreateView is a method not a class!
+            //so call setOnClickListener is just a call!
             add.setOnClickListener(new OnClickListener() {
 
     			@Override
     			public void onClick(View view) {
 //    				Toast.makeText(MainActivity.this, "Button Clicked",	Toast.LENGTH_SHORT).show();
     			counter++;
+    			//setText is final method 
     			display.setText("You total is " + counter);
     			}
 

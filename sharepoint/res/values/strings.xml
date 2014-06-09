@@ -7,6 +7,7 @@
     <string name="account_total">Your total is 0</string>
     <string name="add_one">Add one</string>
     <string name="sub_one">Subtract one</string>
-
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="paintings_web">Do you like this painting?</string>
 
 </resources>
