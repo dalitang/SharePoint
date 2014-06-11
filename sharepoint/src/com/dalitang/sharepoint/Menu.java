@@ -9,7 +9,7 @@ import android.widget.ListView;
 
 public class Menu extends ListActivity{
 
-	String classes[] = {"MainActivity", "example1", "example2", "example3",
+	String classes[] = {"MainActivity", "TextPlay", "example2", "example3",
 			"example4", "example5", "example6"};
 	
 	
@@ -36,7 +36,7 @@ public class Menu extends ListActivity{
 		
 		try {
 			//Try to find the class name
-			Class ourClass = Class.forName("com.dalitang.sharepoint." + cheese);
+			Class<?> ourClass = Class.forName("com.dalitang.sharepoint." + cheese);
 			//create the intent and start it
 			Intent ourIntent = new Intent(Menu.this, ourClass);
 			startActivity(ourIntent);

@@ -9,5 +9,8 @@
     <string name="sub_one">Subtract one</string>
     <string name="title_activity_second">SecondActivity</string>
     <string name="paintings_web">Do you like this painting?</string>
-
+    <string name="edit_text_hint">Type a Command</string>
+    <string name="button">Click Me Button</string>
+    <string name="invalid">invalid</string>
+    <string name="ToggleButton">ToggleButton</string>
 </resources>
