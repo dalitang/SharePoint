@@ -19,7 +19,7 @@ public class Splash extends Activity{
 		
 		//
 		ourSong = MediaPlayer.create(Splash.this, R.raw.abc);
-		ourSong.start();
+//		ourSong.start();
 		
 		//Create a Thread called timer 
 		
@@ -28,7 +28,7 @@ public class Splash extends Activity{
 			public void run(){
 				try{
 					//stay on this page for 15 seconds
-					sleep(15000);
+					sleep(2000);
 					
 				}catch(InterruptedException e){
 					//if there is anything wrong 
@@ -36,9 +36,9 @@ public class Splash extends Activity{
 				}finally{
 					//Call the second activity page
 					//create the intent first
-//					Intent openMainActivity = new Intent("com.dalitang.sharepoint.MainActivity");
+					Intent openMainActivity = new Intent("com.dalitang.sharepoint.Menu");
 					//start intent 
-//					startActivity(openMainActivity);
+					startActivity(openMainActivity);
 				}
 			}
 		};
@@ -52,7 +52,7 @@ public class Splash extends Activity{
 	protected void onPause() {
 		// TODO Auto-generated method stub
 		super.onPause();
-		ourSong.release();
+//		ourSong.release();
 		finish();
 	}
 	
