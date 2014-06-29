@@ -13,4 +13,9 @@
     <string name="button">Click Me Button</string>
     <string name="invalid">invalid</string>
     <string name="ToggleButton">ToggleButton</string>
+    <string name="sendEmail">Send Email</string>
+    <string name="email_addr">Email Address(es)</string>
+    <string name="hate_info">Hateful Info</string>
+    <string name="person_name">Person\'s Name</string>
+    <string name="email">EMAIL</string>
 </resources>

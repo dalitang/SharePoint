@@ -51,6 +51,11 @@
             android:name="com.dalitang.sharepoint.SecondActivity"
             android:label="@string/title_activity_second" >
         </activity>
+        
+        <activity
+            android:name=".Email"
+            android:label="@string/email" >
+        </activity>
     </application>
 
 </manifest>

@@ -19,7 +19,7 @@ public class Splash extends Activity{
 		
 		//
 		ourSong = MediaPlayer.create(Splash.this, R.raw.abc);
-//		ourSong.start();
+		ourSong.start();
 		
 		//Create a Thread called timer 
 		
@@ -27,7 +27,7 @@ public class Splash extends Activity{
 			// run()
 			public void run(){
 				try{
-					//stay on this page for 15 seconds
+					//stay on this page for 2 seconds
 					sleep(2000);
 					
 				}catch(InterruptedException e){
@@ -52,7 +52,7 @@ public class Splash extends Activity{
 	protected void onPause() {
 		// TODO Auto-generated method stub
 		super.onPause();
-//		ourSong.release();
+		ourSong.release();
 		finish();
 	}
 	
